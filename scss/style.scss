@@ -1,0 +1,156 @@
+@import "core/variable";
+@import "core/mixins";
+@import "partials/nav";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  font-family: Noto Sans, sans-serif;
+}
+header {
+  height: 20vh;
+}
+.big-discover {
+  height: 80vh;
+  width: 100%;
+}
+.meet-btn {
+  @extend %medium_btn;
+  @extend %perfect_center;
+  background-color: $primary-color;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+header .small-btn {
+  @extend %small_btn;
+  @extend %perfect_center;
+  background-color: $primary-color;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 700;
+}
+#azar-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 23px;
+}
+.bar {
+  @extend %bar;
+}
+@keyframes spring {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1004;
+  padding: 26px 30px;
+}
+#splash-logo {
+  width: 165px;
+  animation-duration: 1.5s;
+  animation-name: spring;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+.loading {
+  z-index: 9876;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #28ce98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-nav-btn {
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background: #fff;
+  box-shadow: 2px 0 2px 0 rgba(50, 60, 71, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#_main-logo {
+  width: 100px;
+}
+.push {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  z-index: 1001;
+}
+.transparent-bg {
+  transition: opacity 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+}
+.big-discover {
+  position: relative;
+  min-width: fit-content;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-discover {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-bottom {
+  flex: 0 0 auto;
+  position: relative;
+  margin: 62px 0 30px;
+  width: 100%;
+  @extend %perfect_center;
+}
+.content-top {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: min-content;
+}

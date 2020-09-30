@@ -1,0 +1,212 @@
+header .small-btn {
+  padding: 8px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.meet-btn {
+  outline: none;
+  padding: 16px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.content-bottom, header .small-btn, .meet-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+  width: 24px;
+  height: 2px;
+  border-top: 2px solid #000;
+}
+
+.nav {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 70px;
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  font-family: Noto Sans, sans-serif;
+}
+
+header {
+  height: 20vh;
+}
+
+.big-discover {
+  height: 80vh;
+  width: 100%;
+}
+
+.meet-btn {
+  background-color: #28ce98;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+header .small-btn {
+  background-color: #28ce98;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+#azar-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 23px;
+}
+
+@keyframes spring {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1004;
+  padding: 26px 30px;
+}
+
+#splash-logo {
+  width: 165px;
+  animation-duration: 1.5s;
+  animation-name: spring;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.loading {
+  z-index: 9876;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #28ce98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-nav-btn {
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background: #fff;
+  box-shadow: 2px 0 2px 0 rgba(50, 60, 71, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#_main-logo {
+  width: 100px;
+}
+
+.push {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  z-index: 1001;
+}
+
+.transparent-bg {
+  transition: opacity 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+.big-discover {
+  position: relative;
+  min-width: fit-content;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-discover {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-bottom {
+  flex: 0 0 auto;
+  position: relative;
+  margin: 62px 0 30px;
+  width: 100%;
+}
+
+.content-top {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: min-content;
+}
+
+/*# sourceMappingURL=output.css.map */

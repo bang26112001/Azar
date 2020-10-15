@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AZAR</title>
+    <link rel="stylesheet" href="scss/css/output.css" />
+  </head>
+  <body>
+    <div class="loading" style="display: none">
+      <img
+        src="https://dist.azar-web.com/ic-logo-azar@3x.png"
+        id="splash-logo"
+      />
+    </div>
+    <div class="push">
+      <div class="transparent-bg" style="display: none"></div>
+      <div class="left-nav" style="display: none">
+        <div class="information">
+          <div id="square-img">
+            <div class="imgbox-center-crop">
+              <img
+                src="http://d1unckwzkxcoc9.cloudfront.net/public/d933142b-75ed-4dfb-acf0-0b27fbea1760.jpg"
+                class="img-center-crop"
+              />
+            </div>
+          </div>
+          <div class="user-name">Bằng</div>
+          <div class="user-id">
+            <img
+              src="https://dist.azar-web.com/e007557515687cb9be4b36212860225b.ico-profile-id.png"
+            />
+            Not set
+          </div>
+          <div class="nation">
+            <img
+              src="https://dist.azar-web.com/9b4c83bd3342df6f9cb65a92a7cb9db5.flag_vn.png"
+            />
+            Viet Nam
+          </div>
+          <div class="like">
+            <img
+              src="https://dist.azar-web.com/b48c542c62256979428c94ef274bf2a3.btn-chat-thread-thumbsup.png"
+            />
+            0
+          </div>
+        </div>
+        <div class="main-nav">
+          <div class="nav-items">
+            <div class="blank">
+              <div class="nav-primary"></div>
+            </div>
+            <a href="#" class="nav-content">Discover</a>
+          </div>
+          <div class="nav-items">
+            <div class="blank">
+              <div class="nav-primary"></div>
+            </div>
+            <a href="#" class="nav-content">History</a>
+          </div>
+          <div class="nav-items">
+            <div class="blank">
+              <div class="nav-primary"></div>
+            </div>
+            <a href="#" class="nav-content">Friends</a>
+          </div>
+          <div class="nav-items">
+            <div class="blank">
+              <div class="nav-primary"></div>
+            </div>
+            <a href="#" class="nav-content">Message</a>
+          </div>
+          <div class="nav-items">
+            <div class="blank">
+              <div class="nav-primary"></div>
+            </div>
+            <a href="#" class="nav-content">Settings</a>
+          </div>
+        </div>
+        <div class="go-coin-shop">
+          <a href="#/shop" class="go-coin-shop-content">
+            <div>
+              <button class="small-btn">
+                Coin Shop
+                <img
+                  src="https://dist.azar-web.com/4d78502f11b858489ad614a59e08d604.ic-btn-arrow-s.png"
+                  alt="arrow"
+                />
+              </button>
+            </div>
+            <div>
+              <div>
+                <img
+                  class="CoinIcon"
+                  src="https://dist.azar-web.com/f035050da151ba61821d1e79aad92f76.ic-filter-coin.png"
+                />
+                <div class="NumOfCoin">0<span class="coin">COIN</span></div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="left-nav-btn">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </div>
+    </div>
+    <header>
+      <div class="nav">
+        <div>
+          <a href="#" id="azar-logo">
+            <img
+              id="_main-logo"
+              src="https://dist.azar-web.com/4cf0586b54d957854dd189454c6dcef0.ic-logo.svg"
+              alt="azar-logo"
+            />
+          </a>
+        </div>
+        <div>
+          <button class="small-btn">
+            Coin Shop
+            <img
+              src="https://dist.azar-web.com/4d78502f11b858489ad614a59e08d604.ic-btn-arrow-s.png"
+              alt="arrow"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="big-discover">
+      <div class="content-discover">
+        <div class="content-top">
+          <div class="user1 flex-items">
+            <video id="localVideo" autoplay muted></video>
+          </div>
+          <div class="user2 flex-items">
+            <video id="remoteVideo" autoplay></video>
+          </div>
+          <div class="chat-box flex-items">
+            <input type="text" placeholder="Enjoy chatting..." />
+          </div>
+        </div>
+        <div class="content-bottom">
+          <button id="callButton" class="meet-btn">Call
+            <img src="https://dist.azar-web.com/0bfbeb28e996e908a5c3d99fd66d6db0.ic-btn-arrow.png" style="margin-left: 8px;">
+          </button>
+          <button id="answerCallButton" class="meet-btn hidden-first">Answer Call</button>
+          <button id="rejectCallButton" class="meet-btn hidden-first">Reject Call</button>
+          <button id="endCallButton" class="meet-btn hidden-first">End Call</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/lib/jquery.js"></script>
+    <script src="./js/lib/socket.io-2.2.0.js"></script>
+    <script src="./js/StringeeSDK-1.5.10.js"></script>
+    
+    
+
+
+    <script>
+        var token = 'eyJjdHkiOiJzdHJpbmdlZS1hcGk7dj0xIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJTS1dVUkVKaEVqQ3VKUmM3cFZVTk5tRTQ5S3cxRXlndkh6LTE2MDI1MTIwMDkiLCJpc3MiOiJTS1dVUkVKaEVqQ3VKUmM3cFZVTk5tRTQ5S3cxRXlndkh6IiwiZXhwIjoxNjAyNTE1NjA5LCJ1c2VySWQiOiJ1c2VyMSJ9.ScOt40QpNeLTAP1SmqMNkjMl95WzU7uMIYJEDMES5no';
+        var callerId = 'user1';
+        var calleeId = 'user2';
+    </script>
+
+    <script src="./js/azar.js"></script>
+    
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $(".left-nav-btn").click(function () {
+        $(".left-nav").fadeToggle();
+        $(".transparent-bg").fadeToggle();
+      });
+    });
+    const menuIcon = document.querySelector(".left-nav-btn");
+
+    function toggleMenuIcon() {
+      menuIcon.classList.toggle("active");
+    }
+
+    menuIcon.addEventListener("click", toggleMenuIcon);
+    function name(params) {}
+  </script>
+</html>
+
+<!--
+-->

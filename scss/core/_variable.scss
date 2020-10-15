@@ -28,5 +28,5 @@ $shadow_1: 0 4px 17px rgba(0, 0, 0, 0.1);
   transform-origin: center;
   width: 24px;
   height: 2px;
-  border-top: 2px solid #000;
+  border-top: 2px solid var(--color-text);
 }

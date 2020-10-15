@@ -1,4 +1,4 @@
-header .small-btn {
+.go-coin-shop-content > div > .small-btn, header .small-btn {
   padding: 8px 10px;
   border-radius: 3px;
   font-size: 12px;
@@ -14,7 +14,7 @@ header .small-btn {
   line-height: 16px;
 }
 
-.content-bottom, header .small-btn, .meet-btn {
+.go-coin-shop-content > div > .small-btn, .imgbox-center-crop, header .small-btn, .meet-btn, .big-discover .content-discover .content-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,46 @@ header .small-btn {
   transform-origin: center;
   width: 24px;
   height: 2px;
-  border-top: 2px solid #000;
+  border-top: 2px solid var(--color-text);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Noto Sans, sans-serif;
+  --bg: #fff;
+  --bg-panel: #fff;
+  --color-text: #000;
+  --border-color: #e0e4e8;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--bg-panel);
+  height: 100%;
+  width: 100%;
+}
+
+html[data-theme=dark] {
+  font-family: Noto Sans, sans-serif;
+  --bg: #222029;
+  --bg-panel: #222029;
+  --color-text: grey;
+  --border-color: #000;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--bg-panel);
+  background-color: var(--bg-panel);
+}
+
+header {
+  height: 15vh;
 }
 
 .nav {
@@ -34,7 +73,7 @@ header .small-btn {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: var(--bg-panel);
   box-sizing: border-box;
   height: 70px;
   flex: 0 0 auto;
@@ -43,29 +82,68 @@ header .small-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e0e4e8;
+  border-bottom: 1px solid var(--border-color);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  color: #000;
-  background: #fff;
-  height: 100%;
-  width: 100%;
-  font-family: Noto Sans, sans-serif;
-}
-
-header {
-  height: 20vh;
+.hidden-first {
+  display: none;
 }
 
 .big-discover {
-  height: 80vh;
+  height: 85vh;
+  width: 100%;
+  position: relative;
+  min-width: fit-content;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.big-discover .content-discover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.big-discover .content-discover .content-top {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  height: 70%;
+  min-width: min-content;
+}
+.big-discover .content-discover .content-top .flex-items {
+  margin: 5px;
+  position: relative;
+  border: 1px solid rgba(150, 150, 150, 0.11);
+  width: 100%;
+  height: 100%;
+}
+.big-discover .content-discover .content-top .flex-items #localVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.big-discover .content-discover .content-top .flex-items #remoteVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.big-discover .content-discover .content-bottom {
+  flex: 0 0 auto;
+  position: relative;
+  margin: 62px 0 30px;
   width: 100%;
 }
 
@@ -144,7 +222,7 @@ header .small-btn {
   top: 0;
   bottom: 0;
   width: 250px;
-  background: #fff;
+  background: var(--bg);
   box-shadow: 2px 0 2px 0 rgba(50, 60, 71, 0.12);
   display: flex;
   flex-direction: column;
@@ -175,38 +253,168 @@ header .small-btn {
   opacity: 0.3;
 }
 
-.big-discover {
-  position: relative;
-  min-width: fit-content;
-  max-width: 1200px;
-  margin: 20px auto;
+.left-nav-btn > span {
+  transition: all 0.3s ease-in-out;
+}
+.left-nav-btn.active span:nth-child(1) {
+  transform-origin: center center;
+  transform: rotate(-45deg) translate(-12px);
+}
+.left-nav-btn.active span:nth-child(2) {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.left-nav-btn.active span:nth-child(3) {
+  transform-origin: center center;
+  transform: rotate(45deg) translate(-10px);
+}
+
+.information {
+  flex-shrink: 0;
+  margin-top: 3vh;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
-.content-discover {
-  flex: 0 0 auto;
+#square-img {
+  position: relative;
+  height: 144px;
+  width: 144px;
+}
+
+.imgbox-center-crop {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.img-center-crop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-name {
+  box-sizing: border-box;
+  width: 80%;
+  word-wrap: break-word;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0 5px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.user-id {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #28ce98;
+  margin-bottom: 1px;
+}
+
+.user-id > img {
+  height: 12px;
+  vertical-align: -2px;
+}
+
+.nation {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #8c8f98;
+}
+
+.nation > img {
+  height: 12px;
+  vertical-align: -1px;
+}
+
+.like {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #8c8f98;
+  margin-top: 1px;
+}
+
+.like > img {
+  height: 12px;
+  vertical-align: -2px;
+}
+
+.main-nav {
+  height: 37%;
+}
+
+.nav-items {
+  width: 100%;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+}
+
+.blank {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
-  flex-direction: column;
+  height: 45px;
+}
+
+.nav-primary {
+  width: 5px;
+  height: 20px;
+  margin: auto 0;
+  background: #28ce98;
+}
+
+.nav-content {
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  line-height: 45px;
+  height: 45px;
+  width: calc(100% - 30px);
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #4a4a4a;
+  text-decoration: none;
 }
 
-.content-bottom {
-  flex: 0 0 auto;
-  position: relative;
-  margin: 62px 0 30px;
+.nav-items:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.go-coin-shop {
+  align-self: flex-end;
+  flex-shrink: 0;
   width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.content-top {
-  flex: 0 0 auto;
+.go-coin-shop-content {
+  text-decoration: none;
   display: flex;
-  justify-content: center;
-  width: 100%;
-  min-width: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 15px;
+}
+
+.go-coin-shop-content > div > .small-btn {
+  background-color: #28ce98;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -1,4 +1,4 @@
-.go-coin-shop-content > div > .small-btn, header .small-btn {
+.go-coin-shop-content div .small-btn, header .small-btn {
   padding: 8px 10px;
   border-radius: 3px;
   font-size: 12px;
@@ -14,7 +14,7 @@
   line-height: 16px;
 }
 
-.go-coin-shop-content > div > .small-btn, .imgbox-center-crop, header .small-btn, .meet-btn, .big-discover .content-discover .content-bottom {
+.go-coin-shop-content div .small-btn, .imgbox-center-crop, header .small-btn, .meet-btn, .big-discover .content-discover .content-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +35,7 @@
   padding: 0;
 }
 
+/*==============[ Dark/Light mode ]==========================*/
 html {
   font-family: Noto Sans, sans-serif;
   --bg: #fff;
@@ -64,6 +65,7 @@ body {
   background-color: var(--bg-panel);
 }
 
+/*==============[ Top Navigation ]==========================*/
 header {
   height: 15vh;
 }
@@ -85,6 +87,7 @@ header {
   border-bottom: 1px solid var(--border-color);
 }
 
+/*==============[ Main content ]==========================*/
 .hidden-first {
   display: none;
 }
@@ -140,6 +143,24 @@ header {
   height: 100%;
   object-fit: cover;
 }
+.big-discover .content-discover .content-top .flex-items .wrap-input {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+}
+.big-discover .content-discover .content-top .flex-items .wrap-input .input1 {
+  color: #555555;
+  line-height: 1.2;
+  display: block;
+  border: none;
+  width: 100%;
+  background: transparent;
+  height: 34px;
+  padding: 0 25px 0 25px;
+}
 .big-discover .content-discover .content-bottom {
   flex: 0 0 auto;
   position: relative;
@@ -147,6 +168,7 @@ header {
   width: 100%;
 }
 
+/*==============[ Primary Button ]==========================*/
 .meet-btn {
   background-color: #28ce98;
   border: none;
@@ -170,6 +192,7 @@ header .small-btn {
   line-height: 23px;
 }
 
+/*==============[ Hamburger button ]==========================*/
 @keyframes spring {
   0% {
     transform: none;
@@ -186,6 +209,23 @@ header .small-btn {
   padding: 26px 30px;
 }
 
+.left-nav-btn > span {
+  transition: all 0.3s ease-in-out;
+}
+.left-nav-btn.active span:nth-child(1) {
+  transform-origin: center center;
+  transform: rotate(-45deg) translate(-12px);
+}
+.left-nav-btn.active span:nth-child(2) {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.left-nav-btn.active span:nth-child(3) {
+  transform-origin: center center;
+  transform: rotate(45deg) translate(-10px);
+}
+
+/*=================[ Loading Theme ]======================*/
 #splash-logo {
   width: 165px;
   animation-duration: 1.5s;
@@ -207,6 +247,7 @@ header .small-btn {
   align-items: center;
 }
 
+/*=================[ Left Navigation ]======================*/
 .left-nav-btn {
   box-sizing: border-box;
   cursor: pointer;
@@ -251,22 +292,6 @@ header .small-btn {
   height: 100%;
   background-color: #000;
   opacity: 0.3;
-}
-
-.left-nav-btn > span {
-  transition: all 0.3s ease-in-out;
-}
-.left-nav-btn.active span:nth-child(1) {
-  transform-origin: center center;
-  transform: rotate(-45deg) translate(-12px);
-}
-.left-nav-btn.active span:nth-child(2) {
-  transform: translateX(10px);
-  opacity: 0;
-}
-.left-nav-btn.active span:nth-child(3) {
-  transform-origin: center center;
-  transform: rotate(45deg) translate(-10px);
 }
 
 .information {
@@ -342,13 +367,12 @@ header .small-btn {
   color: #8c8f98;
   margin-top: 1px;
 }
-
-.like > img {
+.like img {
   height: 12px;
   vertical-align: -2px;
 }
 
-.main-nav {
+.like > .main-nav {
   height: 37%;
 }
 
@@ -409,12 +433,40 @@ header .small-btn {
   padding: 0 15px;
 }
 
-.go-coin-shop-content > div > .small-btn {
+.go-coin-shop-content div .small-btn {
   background-color: #28ce98;
   border: none;
   outline: none;
   color: #fff;
   font-weight: 700;
+}
+.go-coin-shop-content .coin-shop-item {
+  width: 100%;
+  background-color: var(--bg-panel);
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+}
+.go-coin-shop-content .coin-shop-item .coin-shop-content {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.go-coin-shop-content .coin-shop-item .coin-shop-content .CoinIcon {
+  width: 20px;
+  height: 20px;
+}
+.go-coin-shop-content .coin-shop-item .coin-shop-content .NumOfCoin {
+  font-size: 18px;
+  color: #4a4a4a;
+  font-weight: 700;
+}
+.go-coin-shop-content .coin-shop-item .coin-shop-content .NumOfCoin span {
+  margin-left: 10px;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #8c8f98;
 }
 
 /*# sourceMappingURL=output.css.map */

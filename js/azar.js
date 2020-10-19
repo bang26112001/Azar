@@ -14,6 +14,23 @@
 
 // window.addEventListener("load", startup, false);
 
+// var checkbox = document.querySelector('.setMode[name=theme]');
+// checkbox.addEventListener("click", function () {
+//     if (checkbox.name=='dark'){
+//         trans()
+//         document.documentElement.setAttribute('data-theme','dark')
+//     }else {
+//         document.documentElement.setAttribute('data-theme','light')
+//     }
+// });
+
+// let trans = () => {
+//     document.documentElement.classList.add('transition');
+//     window.setTimeout(() => {
+//         document.documentElement.classList.remove('transition')
+//     },1000)
+// }
+
 
 function settingCallEvent(call1, localVideo, remoteVideo, callButton, answerCallButton, endCallButton, rejectCallButton) {
   call1.on('addremotestream', function (stream) {

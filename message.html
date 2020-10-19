@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Discovery</title>
+    <title>Message</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--===================================================================-->
@@ -9,7 +9,7 @@
     <!--===================================================================-->
   </head>
   <body>
-    <div class="loading" style="">
+    <div class="loading" style="display: none">
       <img
         src="https://dist.azar-web.com/ic-logo-azar@3x.png"
         id="splash-logo"
@@ -50,7 +50,7 @@
         <div class="main-nav">
           <div class="nav-items">
             <div class="blank">
-              <div class="nav-primary"></div>
+              <div class="nav-primary hidden-first"></div>
             </div>
             <a href="discovery.html" class="nav-content">Discover</a>
           </div>
@@ -68,7 +68,7 @@
           </div>
           <div class="nav-items">
             <div class="blank">
-              <div class="nav-primary hidden-first"></div>
+              <div class="nav-primary"></div>
             </div>
             <a href="#" class="nav-content">Message</a>
           </div>
@@ -133,68 +133,7 @@
         </div>
       </div>
     </header>
-    <div class="big-discover">
-      <div class="content-discover">
-        <div class="selection">
-            <button class="setMode" name="dark">
-              <img src="https://dist.azar-web.com/b433ba5e283b64b0396257cb1e6684ea.ic-day-mode.png">
-              Day mode
-            </button>
-            <div class="gender">
-              <div class="Both">
-                <img src="https://dist.azar-web.com/c2cfcdbe2604881effc4fc9b384cd906.ic-both-select.png">
-                <div class="inGender">Both</div>
-              </div>
-              <div class="Female">
-                <img src="https://dist.azar-web.com/e324787097928e9b139cf152e5875fe2.ic-female-normal.png">
-                <div class="inGender">Female</div>
-              </div>
-              <div class="Male">
-                <img src="https://dist.azar-web.com/7f875a47aceaadd484c5e86f5ac9720b.ic-male-normal.png">
-                <div class="inGender">Male</div>
-              </div>
-            </div>
-            <div class="area"></div>
-          </div>
-        <div class="content-top">
-          <div class="user1 flex-items">
-            <video id="localVideo" autoplay muted></video>
-          </div>
-          <div class="user2 flex-items">
-            <video id="remoteVideo" autoplay></video>
-          </div>
-          <div class="chat-box flex-items">
-            <div class="wrap-input">
-            <input class="input1" type="text" placeholder="Enjoy chatting..." />
-            </div>
-          </div>
-        </div>
-        <div class="content-bottom">
-          <button id="callButton" class="meet-btn">Meet friends now!
-            <img src="https://dist.azar-web.com/0bfbeb28e996e908a5c3d99fd66d6db0.ic-btn-arrow.png" style="margin-left: 8px;">
-          </button>
-          <button id="answerCallButton" class="meet-btn hidden-first">Answer Call</button>
-          <button id="rejectCallButton" class="meet-btn hidden-first">Reject Call</button>
-          <button id="endCallButton" class="meet-btn hidden-first">End Call</button>
-        </div>
-      </div>
-    </div>
 
-
-    <!--===================================================================-->
-    <script src="./js/lib/jquery.js"></script>
-    <!--===================================================================-->
-    <script src="./js/lib/socket.io-2.2.0.js"></script>
-    <!--===================================================================-->
-    <script src="./js/StringeeSDK-1.5.10.js"></script>
-    <!--===================================================================-->
-    <script>
-        var token = 'eyJjdHkiOiJzdHJpbmdlZS1hcGk7dj0xIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJTS1dVUkVKaEVqQ3VKUmM3cFZVTk5tRTQ5S3cxRXlndkh6LTE2MDI4OTgyODMiLCJpc3MiOiJTS1dVUkVKaEVqQ3VKUmM3cFZVTk5tRTQ5S3cxRXlndkh6IiwiZXhwIjoxNjA1NDkwMjgzLCJ1c2VySWQiOiJ1c2VyMSJ9.tGUk5rBdu8i0zeQzuMb4iDEep36IUi1EspH25HBQbro';
-        var callerId = 'user1';
-        var calleeId = 'user2';
-    </script>
-    <!--===================================================================-->
-    <script src="./js/azar.js"></script>
     <!--===================================================================-->
   </body>
     <!--===================================================================-->
@@ -233,14 +172,6 @@
     function name(params) {}
   </script>
     <!--===================================================================-->
-    <script>
-      window.onload = function (event) {
-        const layer = document.querySelector(".loading");
-        layer.style.display="none";
-      };
-    </script>
-    <!--===================================================================-->
-    <script src="./js/darkmode.js"></script>
 </html>
 
 <!--

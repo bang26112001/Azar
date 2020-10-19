@@ -14,7 +14,7 @@
   line-height: 16px;
 }
 
-.go-coin-shop-content div .small-btn, .imgbox-center-crop, header .small-btn, .meet-btn, .big-discover .content-discover .content-bottom {
+.go-coin-shop-content div .small-btn, .imgbox-center-crop, header .small-btn, .meet-btn, .big-discover .content-discover .content-bottom, .big-discover .content-discover .selection .setMode {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,11 +36,12 @@
 }
 
 /*==============[ Dark/Light mode ]==========================*/
-html {
+:root {
   font-family: Noto Sans, sans-serif;
   --bg: #fff;
   --bg-panel: #fff;
   --color-text: #000;
+  --bg-btn: #f7f9fa;
   --border-color: #e0e4e8;
 }
 
@@ -51,18 +52,13 @@ body {
   width: 100%;
 }
 
-html[data-theme=dark] {
+.darkmode {
   font-family: Noto Sans, sans-serif;
   --bg: #222029;
   --bg-panel: #222029;
-  --color-text: grey;
+  --color-text: #fff;
+  --bg-btn: #302d3a;
   --border-color: #000;
-}
-
-body {
-  color: var(--color-text);
-  background: var(--bg-panel);
-  background-color: var(--bg-panel);
 }
 
 /*==============[ Top Navigation ]==========================*/
@@ -111,6 +107,77 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+.big-discover .content-discover .selection {
+  display: flex;
+  width: 70%;
+  height: 34px;
+  margin-bottom: 10px;
+}
+.big-discover .content-discover .selection .setMode:hover {
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.1);
+}
+.big-discover .content-discover .selection .setMode {
+  padding: 8px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 14px;
+  flex: 0 0 auto;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 0 20px;
+  width: 160px;
+  color: var(--color-text);
+  background-color: var(--bg-btn);
+}
+.big-discover .content-discover .selection .setMode img {
+  margin-right: 5px;
+}
+.big-discover .content-discover .selection .gender {
+  margin-right: 30px;
+  display: flex;
+}
+.big-discover .content-discover .selection .gender .Both {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 5px 7px;
+  border-radius: 20px;
+  background-color: var(--bg-btn);
+}
+.big-discover .content-discover .selection .gender .Both img {
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+.big-discover .content-discover .selection .gender .Male {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 5px 7px;
+}
+.big-discover .content-discover .selection .gender .Male img {
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+.big-discover .content-discover .selection .gender .Female {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 5px 7px;
+}
+.big-discover .content-discover .selection .gender .Female img {
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
 }
 .big-discover .content-discover .content-top {
   flex: 0 0 auto;
@@ -166,6 +233,13 @@ header {
   position: relative;
   margin: 62px 0 30px;
   width: 100%;
+}
+
+.inGender {
+  font-weight: 700;
+  color: var(--color-text);
+  font-size: 13px;
+  line-height: 15px;
 }
 
 /*==============[ Primary Button ]==========================*/
@@ -423,6 +497,7 @@ header .small-btn {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .go-coin-shop-content {
@@ -442,6 +517,7 @@ header .small-btn {
 }
 .go-coin-shop-content .coin-shop-item {
   width: 100%;
+  margin-top: 5px;
   background-color: var(--bg-panel);
   border-radius: 3px;
   border: 1px solid #eaeaea;

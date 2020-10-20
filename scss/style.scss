@@ -205,7 +205,7 @@ header {
     .content-bottom {
       flex: 0 0 auto;
       position: relative;
-      margin: 62px 0 30px;
+      margin: 30px 0 30px;
       width: 100%;
       @extend %perfect_center;
     }
@@ -512,6 +512,126 @@ header .small-btn {
           font-weight: 700;
           color: #8c8f98;
         }
+      }
+    }
+  }
+}
+/*=================[ Page Message ]======================*/
+.message {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-width: 1111px;
+  height: 100%;
+  .message-left {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 420px;
+    padding: 0 30px;
+    border-right: 1px solid #eff1f3;
+    overflow-y: hidden;
+    a {
+      flex: 0 0 auto;
+      display: flex;
+      margin: 0 -30px;
+      height: 80px;
+      background-color: #28ce98;
+      text-decoration: none;
+      img {
+        height: 100%;
+      }
+      .go-discover-content {
+        margin-left: 15px;
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .go-to-discover {
+          display: flex;
+          align-items: center;
+          margin-bottom: 4px;
+          div {
+            line-height: 24px;
+            font-size: 20px;
+            color: #fff;
+            font-weight: 700;
+          }
+          img {
+            width: 13px;
+            height: 18px;
+            margin-left: 6.6px;
+          }
+        }
+        .Make-new-friends {
+          font-size: 12px;
+          line-height: 14px;
+          color: rgba(119, 255, 211, 0.6);
+        }
+      }
+    }
+    .message-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 30px 0;
+      h2 {
+        margin: 0;
+        flex-shrink: 0;
+        font-weight: 700;
+        font-size: 1.8rem;
+      }
+    }
+    .message-slidebar {
+      flex: 1 1 auto;
+      padding: 0 30px;
+      margin: 0 -30px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      .message-slidebar-add-friend {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+        cursor: pointer;
+        img {
+          height: 52px;
+          width: 52px;
+          margin-right: 16px;
+        }
+        span {
+          line-height: 1;
+          color: #4a4a4a;
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .message-right {
+    flex: 1 1 auto;
+    position: relative;
+    overflow-y: auto;
+    background-color: #fafbfb;
+    height: 100%;
+    .wrap-input {
+      width: 100%;
+      position: absolute;
+      bottom: 10px;
+      background-color: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 18px;
+      .input1 {
+        color: #555555;
+        line-height: 1.2;
+        display: block;
+        border: none;
+        width: 100%;
+        background: transparent;
+        height: 34px;
+        padding: 0 25px 0 25px;
       }
     }
   }

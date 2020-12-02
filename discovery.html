@@ -136,9 +136,9 @@
     <div class="big-discover">
       <div class="content-discover">
         <div class="selection">
-            <button class="setMode" name="dark">
-              <img src="https://dist.azar-web.com/b433ba5e283b64b0396257cb1e6684ea.ic-day-mode.png">
-              Day mode
+            <button class="setMode" id="light" name="dark">
+              <img id="touch" src="https://dist.azar-web.com/b238c45406ea87c25bbe3c3d410a13ce.ic-night-mode.png">
+              Night mode
             </button>
             <div class="gender">
               <div class="Both">
@@ -159,10 +159,11 @@
         <div class="content-top">
           <div class="user1 flex-items">
             <video id="localVideo" autoplay muted></video>
-          </div>
-          <div class="user2 flex-items">
             <video id="remoteVideo" autoplay></video>
           </div>
+          <!-- <div class="user2 flex-items">
+            <video id="remoteVideo" autoplay></video>
+          </div> -->
           <div class="chat-box flex-items">
             <div class="wrap-input">
             <input class="input1" type="text" placeholder="Enjoy chatting..." />
@@ -189,7 +190,7 @@
     <script src="./js/StringeeSDK-1.5.10.js"></script>
     <!--===================================================================-->
     <script>
-        var token = 'eyJjdHkiOiJzdHJpbmdlZS1hcGk7dj0xIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJTS1dVUkVKaEVqQ3VKUmM3cFZVTk5tRTQ5S3cxRXlndkh6LTE2MDI4OTgyODMiLCJpc3MiOiJTS1dVUkVKaEVqQ3VKUmM3cFZVTk5tRTQ5S3cxRXlndkh6IiwiZXhwIjoxNjA1NDkwMjgzLCJ1c2VySWQiOiJ1c2VyMSJ9.tGUk5rBdu8i0zeQzuMb4iDEep36IUi1EspH25HBQbro';
+        var token = 'eyJjdHkiOiJzdHJpbmdlZS1hcGk7dj0xIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJTS3VYYWFPUDlHY3ZGU1NYM1JmVnNZRFhJZjB6VFFBbWZMLTE2MDY4NzczNTciLCJpc3MiOiJTS3VYYWFPUDlHY3ZGU1NYM1JmVnNZRFhJZjB6VFFBbWZMIiwiZXhwIjoxNjA5NDY5MzU3LCJ1c2VySWQiOiJ1c2VyMSJ9.QWoneFg93KKRpkqQQn0K9AVFdZqEXvhuXLfYvWjWwJY';
         var callerId = 'user1';
         var calleeId = 'user2';
     </script>
@@ -230,7 +231,6 @@
     }
 
     menuIcon.addEventListener("click", toggleMenuIcon);
-    function name(params) {}
   </script>
     <!--===================================================================-->
     <script>
@@ -238,6 +238,23 @@
         const layer = document.querySelector(".loading");
         layer.style.display="none";
       };
+    </script>
+    <script>
+      // $(document).ready(function(){
+      //   var touch=document.getElementById('touch');
+      //   var mode=document.getElementById('light');
+      //   $("#light").click(function(){
+      //     $("#light").text("Day mode");
+      //     $("#touch").attr("src","https://dist.azar-web.com/b433ba5e283b64b0396257cb1e6684ea.ic-day-mode.png");
+      //   });
+      //   // var touch=document.getElementById('touch');
+      //   // var mode=document.getElementById('light');
+      //   // if (mode.textContent == 'Day mode') {
+      //   //   $("#light").text("Night mode");
+      //   // }  
+      //   // console.log(mode.textContent);
+      //   // console.log(touch.src);
+      // });
     </script>
     <!--===================================================================-->
     <script src="./js/darkmode.js"></script>

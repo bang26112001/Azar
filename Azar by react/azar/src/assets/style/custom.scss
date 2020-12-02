@@ -1,7 +1,4 @@
-@import "core/variable";
-@import "core/mixins";
-
-* {
+@import "./variable" * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -157,9 +154,7 @@ header {
       width: 75%;
       height: 70%;
       min-width: min-content;
-      .chat-box {
-        width: 40% !important;
-      }
+
       .flex-items {
         margin: 5px;
         position: relative;
@@ -170,22 +165,16 @@ header {
         #localVideo {
           position: absolute;
           top: 0;
-          right: 0;
-          width: 120px;
-          z-index: 10;
-          border: 1px solid rgb(223, 223, 223);
-          // position: absolute;
-          // top: 0;
-          // left: 0;
-          // width: 100%;
-          // height: 100%;
-          // object-fit: cover;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         #remoteVideo {
-          width: 100%;
           position: absolute;
           top: 0;
           left: 0;
+          width: 100%;
           height: 100%;
           object-fit: cover;
         }
